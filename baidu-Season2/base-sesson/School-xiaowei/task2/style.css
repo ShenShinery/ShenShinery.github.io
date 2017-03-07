@@ -11,6 +11,9 @@ body{
 .clr{
     clear: both;
 }
+input,select,textarea{
+    box-sizing: border-box;
+}
 .website-header{
     height: 60px;
     width: 100%;
@@ -36,6 +39,12 @@ nav a{
     color:white;
     text-decoration: none;
     font-size: 14px;
+}
+nav a:hover{
+    color: #ABAAA5;
+}
+a.active{
+    color: #ABAAA5;
 }
 article,aside{
     background-color: #FFFFFF;
@@ -68,7 +77,8 @@ article,aside{
     list-style: none;
 }
 .picture-list li{
-    margin-bottom: 10px;
+    margin:0px auto 16px 40px;
+    /*margin-bottom: 10px;*/
 }
 figure{
     width: 140px;
@@ -96,6 +106,7 @@ figure img{
 }
 th{
     background-color: #333333;
+    color:white;
 }
 tr{
     height: 20px;
@@ -112,7 +123,7 @@ tr:last-child{
     background-color: #CCCCCC;
 }
 form{
-    margin:20px auto;
+    margin-top: 20px;
     font-size: 14px;
 }
 .form-left-side{
@@ -122,7 +133,7 @@ form{
 }
 .form-left-side div{
     height:40px;
-    line-height: 30px;
+    line-height: 40px;
 }
 .form-right-side{
     width: 70%;
@@ -132,20 +143,27 @@ form{
 .form-right-side div{
     margin-left: 10px;
     height:40px;
-    line-height: 30px;
+    line-height: 40px;
+}
+.form-right-side textarea{
+    margin-left: 10px;
+    width: 400px;
+}
+.input-description{
+    color: #A7A3A4;
 }
 .form-input{
     width: 400px;
     height: 30px;
-    /*border-radius: 1px;*/
+    padding-left: 5px;
 }
 .submit-btn{
     width: 100%;
-    height: 30px;
-    border-radius: 3px;
-    background-color: cornflowerblue;
+    height: 40px;
+    border-radius: 9px;
+    background-color: #3355D0;
     border: 0;
-    margin-top: 50px;
+    margin-top: 16px;
 }
 footer{
     height: 60px;
