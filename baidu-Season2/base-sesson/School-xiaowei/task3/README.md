@@ -1,3 +1,11 @@
+<style>
+ul,a{
+     font-size:14px;
+}
+a{
+    color:#7EC8B5;
+}
+</style>
 ##任务目标##
 <ul>
     <li>掌握HTML/CSS布局的概念</li>
