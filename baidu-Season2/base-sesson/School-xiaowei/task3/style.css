@@ -54,9 +54,10 @@ ul{
     list-style: none;
     font-size: 14px;
     color: #626262;
+    margin-bottom：20px;
 }
 h3{
-     margin:20px auto 20px 0px;;
+     margin:0px auto 6px 0px;
 }
 .clear{
     clear: both;
