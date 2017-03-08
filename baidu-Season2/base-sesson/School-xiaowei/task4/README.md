@@ -1,57 +1,47 @@
 ##任务目标##
 <ul>
-    <li>掌握HTML/CSS布局的概念</li>
-    <li>掌握盒模型的概念</li>
-    <li>掌握position与float的概念以及在布局时的用法</li>
+    <li>实践HTML/CSS布局方式</li>
+    <li>深入了解position等CSS属性</li>
 </ul>
 ##任务描述##
 <ul>
     <li>
-        使用 HTML 与 CSS 按照示例图, 实现三栏式布局。
+        实现如示例图的效果
     </li>
     <li>
-        左右两栏宽度固定，中间一栏根据父元素宽度填充满，最外面的框应理解为浏览器。背景色为 #eee 区域的高度取决于三个子元素中最高的高度。
+        灰色元素水平垂直居中，有两个四分之一圆位于其左上角和右下角。
     </li>
 </ul>
 ##任务注意事项##
 <ul>
-    <li>尝试 position 和 float 的效果，思考它们的异同和应用场景。</li>
+    <li>思考不同情况下（如灰色高度是根据内容动态变化的）水平垂直居中的解决方案。</li>
+    <li>
+        动手试一试各种情况的组合，父元素和子元素分别取不同的 position 值。思考 position 属性各种取值的真正含义，尤其是 absolute 究竟是相对谁而言的。
+    </li>
     <li>注意测试不同情况，尤其是极端情况下的效果。</li>
-    <li>图片和文字内容请自行替换，尽可能体现团队的特色。</li>
-    <li>调节浏览器宽度，固定宽度和自适应宽度的效果始终符合预期。</li>
-    <li>改变中间一栏的内容长度，以确保在中间一栏较高和右边一栏较高时，父元素的高度始终为子元素中最高的高度。</li>
-    <li>其他效果图中给出的标识均被正确地实现。</li>
+    <li>调节浏览器宽度，灰色元素始终水平居中。</li>
+    <li>调节浏览器高度，灰色元素始终垂直居中。</li>
+    <li>调节浏览器高度和宽度，黄色扇形的定位始终准确。</li>
+    <li>其他效果图中给出的标识均被正确地实现，错一项扣一分。</li>
 </ul>
 ##参考资料##
 <ul>
     <li>
-        <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/position"  target="view_window">
-            MDN：position
+        <a href="http://www.w3cplus.com/css/advanced-html-css-lesson2-detailed-css-positioning.html" target="view_window">
+            HTML和CSS高级指南之二——定位详解
         </a>
-        ：了解 CSS position 属性的基本知识
+        ：大漠老师手把手教你，这次彻底搞懂定位问题
     </li>
     <li>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float" target="view_window">
-            MDN：float
+        <a href="https://css-tricks.com/centering-css-complete-guide/" target="view_window">
+            Centering in CSS: A Complete Guide
         </a>
-        ：了解 CSS float 属性的基本知识
+        ：完整讨论了不同情况下的居中方案，建议自己思考之后再看答案
     </li>
     <li>
-        <a href="http://www.barelyfitz.com/screencast/html-training/css/positioning/" target="view_window">
-            Learn CSS Positioning in Ten Steps
+        <a href="http://howtocenterincss.com/" target="view_window">
+            Get HTML||CSS Tips In Your Inbox
         </a>
-        ：通过具体的例子熟悉 position 属性
-    </li>
-    <li>
-        <a href="http://zh.learnlayout.com/clearfix.html" target="view_window">
-            清除浮动（clearfix hack）
-        </a>
-        ：清除浮动是什么，如何简单地清除浮动
-    </li>
-    <li>
-        <a href="http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use" target="view_window">
-            StackOverflow：Which method of ‘clearfix’ is best?
-        </a>
-        ：清除浮动黑科技完整解读
+        ：有人写了一个作弊工具生成居中代码，但是看着代码你明白为什么吗
     </li>
 </ul>
