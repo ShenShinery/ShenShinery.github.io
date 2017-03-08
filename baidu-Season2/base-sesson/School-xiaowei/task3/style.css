@@ -17,6 +17,9 @@ body{
     border:1px solid #999;  
     float: left;
 }
+.left-side div {
+    margin-top: 20px;
+}
 img{
     width: 80px;
     height: 80px;
