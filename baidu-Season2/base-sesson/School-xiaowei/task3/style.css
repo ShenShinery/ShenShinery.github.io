@@ -14,8 +14,7 @@ body{
     width:200px;
     height: 120px;
     background-color: white;
-    border:1px solid #999;
-    line-height: 60px;  
+    border:1px solid #999;  
     float: left;
 }
 img{
