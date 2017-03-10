@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5</title>
+    <style>
+        .queue-list{
+            list-style: none;
+            padding:0;
+            height: 120px;
+            position: relative;
+        }
+        li{
+            width: 24px;
+            color: white;
+            background-color: red;
+            text-align: center;  
+            display: inline-block;
+            position: absolute;
+            bottom: 10px;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input id="number-input" type="text" /> 
+        <button id="left-in">左侧入</button><button id="right-in">右侧入</button>
+        <button id="left-out">左侧出</button><button id="right-out">右侧出</button>
+    </div>
+    <ul class="queue-list" id="queue">
+        <li>21</li>
+        <li>23</li>
+        <li>48</li>
+        <li>89</li>
+        <li>76</li>
+    </ul>
+    <button id="sort-btn">排序</button>
+    <ul class="queue-list" id="sort-queue">
+
+    </ul>
+    <script type="text/javascript">
+    function validateIsNum(number){
+        if(number.trim() == ""){
+            alert("请输入添加的内容");
+            return false;
+        }
+        if (isNaN(number)){
+            alert("请输入数字");
+            return false; 
+        }
+        if(number>100 || number<10){
+            alert("请输入10-100区间的数字");
+            return false; 
+        }
+        return true;
+    }
+    function leftIn(){
+        var list = document.getElementById("queue");
+        var number = document.getElementById("number-input").value;
+        if (!validateIsNum(number)) {
+            return;
+        }
+        if(list.getElementsByTagName("li").length >60){
+            alert("队列的值已经超过60");
+        }
+        var li= document.createElement("li");
+        li.innerHTML = number;
+        list.insertBefore(li,list.childNodes[0]);
+        initLiStyle(list);
+    }
+    function leftOut(){
+        var list = document.getElementById("queue");
+        var iList = list.getElementsByTagName("li");
+        if(iList.length == 0){
+            alert("没有可删除的数字了！");
+            return;
+        }
+        var nodeVal = iList[0].innerHTML;
+        list.removeChild(iList[0]);
+        initLiStyle(list);
+        alert(nodeVal);
+    }
+    function rightIn(){
+        var list = document.getElementById("queue");
+        var number = document.getElementById("number-input").value;
+        if (!validateIsNum(number)) {
+            return;
+        }  
+        var li= document.createElement("li");
+        list.appendChild(li).append(number);
+        initLiStyle(list);
+    }
+    function rightOut(){
+        var list = document.getElementById("queue");
+        var iList = list.getElementsByTagName("li");
+        if(iList.length == 0){
+            alert("没有可删除的数字了！");
+            return;
+        }
+        var nodeVal = iList[iList.length-1].innerHTML;
+        list.removeChild(iList[iList.length-1]);
+        initLiStyle(list);
+        alert(nodeVal);
+    }
+    function initLiStyle(list){
+        var iList = list.getElementsByTagName("li");
+        for(var i=0;i<iList.length;i++){
+            var height = iList[i].innerHTML;
+            var left = i*30;
+            iList[i].style.height = height + "px";
+            iList[i].style.left = left +"px";
+        }
+    }
+    
+    document.getElementById("left-in").onclick = leftIn;
+    document.getElementById("left-out").onclick = leftOut;
+    document.getElementById("right-in").onclick = rightIn;
+    document.getElementById("right-out").onclick = rightOut;
+    document.getElementById("sort-btn").onclick = function(){
+        var list = document.getElementById("queue").getElementsByTagName("li");
+        var data = [];
+        for(var i = 0; i<list.length; i++){
+            data.push(list[i].innerHTML);
+        }
+        var aqiData = data.sort(function(x, y){ 
+            return x-y;
+        });
+        var list2 = document.getElementById("sort-queue");
+        for(var i=0;i<aqiData.length;i++){
+            var li= document.createElement("li");  
+            list2.appendChild(li).append(aqiData[i]);         
+        }
+        initLiStyle(list2);
+    }
+    var list = document.getElementById("queue");
+    list.onclick = function(e){
+        list.removeChild(e.target);
+        initLiStyle(list);
+    }
+    initLiStyle(list);
+    </script>
+</body>
+</html>
