@@ -34,6 +34,10 @@
         <li>48</li>
         <li>89</li>
         <li>76</li>
+        <li>63</li>
+        <li>88</li>
+        <li>56</li>
+        <li>30</li>
     </ul>
     <button id="sort-btn">排序</button>
     <ul class="queue-list" id="sort-queue">
@@ -127,6 +131,7 @@
             return x-y;
         });
         var list2 = document.getElementById("sort-queue");
+        list2.innerHTML = "";
         for(var i=0;i<aqiData.length;i++){
             var li= document.createElement("li");  
             list2.appendChild(li).append(aqiData[i]);         
