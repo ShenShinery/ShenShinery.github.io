@@ -1,0 +1,24 @@
+.queue-list{
+    list-style: none;
+    padding: 0;
+}
+li{
+    padding: 10px 6px;;
+    color: white;
+    background-color: red;
+    text-align: center;  
+    display: inline-block;
+    margin: 3px;
+}
+.left-side{
+    float: left;
+}
+.right-side{
+    margin-left: 20px;
+    float: left;
+}
+button{
+    margin: 5px;
+    height: 26px;
+    width: 100px;
+}
