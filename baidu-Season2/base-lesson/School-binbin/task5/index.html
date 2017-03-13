@@ -7,12 +7,12 @@
         .queue-list{
             list-style: none;
             padding:0;
-            height: 120px;
+            height: 320px;
             position: relative;
         }
         li{
             width: 24px;
-            color: white;
+            color: red;
             background-color: red;
             text-align: center;  
             display: inline-block;
@@ -32,12 +32,15 @@
         <li>21</li>
         <li>23</li>
         <li>48</li>
-        <li>89</li>
+        <li>99</li>
         <li>76</li>
         <li>63</li>
         <li>88</li>
         <li>56</li>
-        <li>30</li>
+        <li>38</li>
+        <li>19</li>
+        <li>57</li>
+        <li>90</li>
     </ul>
     <button id="sort-btn">排序</button>
     <ul class="queue-list" id="sort-queue">
@@ -110,33 +113,57 @@
     function initLiStyle(list){
         var iList = list.getElementsByTagName("li");
         for(var i=0;i<iList.length;i++){
-            var height = iList[i].innerHTML;
+            var height = iList[i].innerHTML*3;
             var left = i*30;
             iList[i].style.height = height + "px";
             iList[i].style.left = left +"px";
         }
     }
     
+    function applySort(que){
+        var list = document.getElementById("queue").getElementsByTagName("li");
+        var temp;
+        temp = list[que[0]].style.height;
+        list[que[0]].style.height = list[que[1]].style.height;
+        list[que[1]].style.height = temp;
+        
+    }
+    function sortQue(){
+        var list = document.getElementById("queue").getElementsByTagName("li");
+        if(list == null || list.length ==0){
+            alert("没有需要排序的数字");
+        }
+        var temp,array = [];
+        for(var i=0;i<list.length;i++){
+            for(var j=i+1;j<list.length;j++){
+                if(list[i].innerHTML>list[j].innerHTML){
+                    var que = [];
+                    temp = list[i].innerHTML;
+                    list[i].innerHTML = list[j].innerHTML;
+                    list[j].innerHTML = temp;
+                    que.push(i);
+                    que.push(j);
+                    array.push(que);
+                }
+            }
+        }
+        var i=0;
+        var sortInt = setInterval(function(){
+            if(array.length>0){
+                applySort(array[i++]); 
+            }
+            if(i>=array.length){
+                clearInterval(sortInt);        
+            }            
+        },500);
+        
+    }
     document.getElementById("left-in").onclick = leftIn;
     document.getElementById("left-out").onclick = leftOut;
     document.getElementById("right-in").onclick = rightIn;
     document.getElementById("right-out").onclick = rightOut;
     document.getElementById("sort-btn").onclick = function(){
-        var list = document.getElementById("queue").getElementsByTagName("li");
-        var data = [];
-        for(var i = 0; i<list.length; i++){
-            data.push(list[i].innerHTML);
-        }
-        var aqiData = data.sort(function(x, y){ 
-            return x-y;
-        });
-        var list2 = document.getElementById("sort-queue");
-        list2.innerHTML = "";
-        for(var i=0;i<aqiData.length;i++){
-            var li= document.createElement("li");  
-            list2.appendChild(li).append(aqiData[i]);         
-        }
-        initLiStyle(list2);
+        sortQue();
     }
     var list = document.getElementById("queue");
     list.onclick = function(e){
