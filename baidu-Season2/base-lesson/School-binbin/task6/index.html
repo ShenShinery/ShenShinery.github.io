@@ -32,6 +32,7 @@
     function splitContent(content){
         if(content.trim() == ""){
             alert("请输入要添加的值");
+            return;
         }
         var arr = content.split(";");
         return arr;
@@ -40,6 +41,9 @@
         var list = document.getElementById("queue");
         var content = document.getElementById("content-text").value;
         var arr = splitContent(content);
+        if(arr == null){
+            return;
+        }
         var arr1 = arr.reverse();     
         for(var i=0;i<arr.length;i++){
             var li= document.createElement("li");
@@ -62,6 +66,9 @@
         var list = document.getElementById("queue");
         var content = document.getElementById("content-text").value;
         var arr = splitContent(content);
+        if(arr == null){
+            return;
+        }
         var arr1 = arr.reverse();     
         for(var i=0;i<arr.length;i++){
             var li= document.createElement("li");
@@ -82,25 +89,30 @@
     }
     function searchAndHighlight(){
         var searchKey = document.getElementById("search-content").value;
+        if(searchKey.trim() == ""){
+            alert("没有输入要查询的内容");
+            return;
+        }
         var list = document.getElementById("queue").getElementsByTagName("li");
         var k = 0;
         for (var i = 0;i<list.length;i++){
+            list[i].innerHTML = list[i].innerText.replaceAll("<font style='background-color: #68D0FE;margin-right:1px;'>" + searchKey + "</font>" , searchKey);
+            var count=0;
             if(list[i].innerHTML.indexOf(searchKey) != -1){
-                k++;
-                list[i].style.backgroundColor = "orange";
-                //var htmlArr = list[i].innerHTML.split(searchKey);
-                // var font = document.createElement("font");
-                // font.innerHTML = searchKey;
-                // font.setAttribute("style","color:blue");
-                // list[i].innerHTML="";
-                // list[i].append(htmlArr[0] + "<font style='color:blue;'>" + searchKey + "</font>" + htmlArr[1]);
-            }else{
-                list[i].style.backgroundColor = "red";
+                var str = list[i].innerHTML;     
+                list[i].innerHTML = str.replaceAll(searchKey ,"<font style='background-color: #68D0FE;margin-right:1px;'>" + searchKey + "</font>");
+                while(str.indexOf(searchKey) !=-1 ){
+                    str = str.replace(searchKey,"");
+                    count++;  
+                }
             }
+            k = k + count; 
         }
         document.getElementById("result").innerHTML = "共查询到" + k + "个结果.";
-        console.log(k);
     }
+    String.prototype.replaceAll  = function(s1,s2){     
+        return this.replace(new RegExp(s1,"gm"),s2);     
+    }   
     document.getElementById("left-in").onclick = leftIn;
     document.getElementById("left-out").onclick = leftOut;
     document.getElementById("right-in").onclick = rightIn;
