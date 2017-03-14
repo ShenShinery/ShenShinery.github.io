@@ -88,8 +88,8 @@
         alert(nodeVal);
     }
     function searchAndHighlight(){
-        var searchKey = document.getElementById("search-content").value;
-        if(searchKey.trim() == ""){
+        var searchKey = document.getElementById("search-content").value.trim();
+        if(searchKey == ""){
             alert("没有输入要查询的内容");
             return;
         }
