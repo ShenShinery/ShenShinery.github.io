@@ -31,17 +31,23 @@
     <script type="text/javascript">
     function splitContent(content){
         if(content.trim() == ""){
-            alert("请输入要添加的值");
             return;
         }
         var arr = content.split(";");
-        return arr;
+        var arr1 = [];
+        for (var i=0;i<arr.length;i++){
+            if(arr[i].trim()!=""){
+                arr1.push(arr[i]);
+            }
+        }
+       return arr1;
     }
     function leftIn(){
         var list = document.getElementById("queue");
         var content = document.getElementById("content-text").value;
         var arr = splitContent(content);
-        if(arr == null){
+        if(arr == null || arr.length==0){
+            alert("请输入要添加的值");
             return;
         }
         var arr1 = arr.reverse();     
@@ -66,7 +72,8 @@
         var list = document.getElementById("queue");
         var content = document.getElementById("content-text").value;
         var arr = splitContent(content);
-        if(arr == null){
+        if(arr == null || arr.length==0){
+            alert("请输入要添加的值");
             return;
         }
         var arr1 = arr.reverse();     
