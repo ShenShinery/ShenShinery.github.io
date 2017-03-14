@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+form{
+    width: 800px;
+    margin: 100px auto;   
+}
+.input-item{
+    height: 60px;
+    line-height: 60px;
+}
+form .input-span{
+    font-size: 24px;
+    width: 100px;
+}
+input{
+    width: 500px;
+    height: 60px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 24px;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+button{
+    width: 100px;
+    height: 60px;
+    background-color: #2F79BA;
+    border: 1px solid #2F79BA;
+    border-radius: 5px;
+    margin: 0 20px;
+    color: white;
+    font-size: 24px;
+    box-sizing: border-box;
+}
+.validate-info{
+    height: 40px;
+    margin-left: 90px;
+    color: #A8A8A8;
+}
