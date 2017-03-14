@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <form action="">
+        <div class="input-item">
+            <span class="input-span">姓名：</span><input type="text" id="userName" /><button type="button" id="name-validate">验证</button>
+        </div>
+        <div class="validate-info" id="name-validate-info"></div>
+        <div class="input-item">
+            <span class="input-span">账号：</span><input type="text" id="userAccount" /><button type="button" id="account-validate">验证</button>
+        </div>
+        <div class="validate-info" id="account-validate-info"></div>
+        <div class="input-item">
+           <span class="input-span"> 测试：</span><input type="text" id="userTest" /><button type="button" id="test-validate">验证</button>
+        </div>
+        <div class="validate-info" id="test-validate-info"></div>
+    </form>   
+
+<script type="text/javascript">
+function validateName(){   
+    var name = document.getElementById("userName");
+    var info = document.getElementById("name-validate-info");
+    name.style.border = "1px solid #CCCCCC";
+    info.innerHTML = "";
+    if(name.value.trim().length<4 || name.value.trim().length>16){
+        name.style.border = "1px solid #DE0012";
+        if(name.value.trim().length == 0){
+            info.innerHTML = "必填";
+        }else{
+            info.innerHTML = "长度请为4-16个字符";
+        }
+        
+        info.style.color="#DE0012";
+    }else{
+        name.style.border = "1px solid #5FBD43";
+        info.innerHTML = "姓名格式正确";
+        info.style.color= "#5FBD43";
+    }
+}
+function validateAccount(){
+    var account = document.getElementById("userAccount");
+    var info = document.getElementById("account-validate-info");
+    account.style.border = "1px solid #CCCCCC";
+    info.innerHTML = "";
+    var accValue = account.value.trim();
+    var charArr= accValue.split("");
+    var flag = 1;
+    var badchar ="abcdefghijklmnopqrstuvwxyz";
+    badchar += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    badchar += "0123456789";
+    badchar += "`~!@#$%^&()-_=+]\|:;"+"\'<,>?/";
+    if(charArr.length == 0){
+        account.style.border = "1px solid #DE0012";
+        info.innerHTML = "必填";
+        info.style.color="#DE0012";
+    }else {
+        for(var i = 0;i<charArr.length;i++){
+            if(badchar.indexOf(charArr[i]) == -1){
+                flag = -1;
+                break;
+            }else if(accValue.indexOf(charArr[i]) !=accValue.lastIndexOf(charArr[i])){  
+                flag = 0;
+                break;
+            }                 
+        }
+        if(flag == -1){
+            account.style.border = "1px solid #DE0012";
+            info.innerHTML = "内容必须是英文字母、数字或者英文符号";
+            info.style.color="#DE0012";
+        }else if(flag == 0){
+            account.style.border = "1px solid #DE0012";
+            info.innerHTML = "每个英文字母、数字、英文符号长度为1";
+            info.style.color="#DE0012";
+        }else{
+            account.style.border = "1px solid #5FBD43";
+            info.innerHTML = "账号格式正确";
+            info.style.color= "#5FBD43";
+        }      
+    }  
+}
+function validateTest(){
+    var test = document.getElementById("userTest");
+    var info = document.getElementById("test-validate-info");
+}
+document.getElementById("name-validate").onclick = validateName;
+document.getElementById("account-validate").onclick = validateAccount;
+document.getElementById("test-validate").onclick = validateTest;
+</script>
+</body>
+</html>
