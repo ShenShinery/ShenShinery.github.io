@@ -7,7 +7,7 @@
 }
 form{
     width: 800px;
-    margin: 20px auto;   
+    margin: 120px auto;   
 }
 .input-item{
     height: 60px;
@@ -19,9 +19,6 @@ form{
     text-align: right;
     float: left;
 }
-.input-div{
-    float: left;
-}
 input{
     width: 600px;
     height: 60px;
@@ -30,6 +27,7 @@ input{
     font-size: 24px;
     box-sizing: border-box;
     margin-left: 20px;
+    padding: 5px;
 }
 button{
     width: 100px;
@@ -44,11 +42,7 @@ button{
     float: right;
 }
 .validate-info{
-    height: 40px;
-    margin-left: 90px;
-    color: #A8A8A8;
-}
-.description{
-    margin-left: 90px;
+    height: 60px;
+    margin-left: 160px;
     color: #A8A8A8;
 }
