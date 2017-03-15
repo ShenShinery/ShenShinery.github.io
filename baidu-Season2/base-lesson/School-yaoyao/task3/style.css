@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+form{
+    width: 800px;
+    margin: 180px auto;
+    /*text-align: center;*/
+}
+.radio-input{
+    margin-left: 200px;
+}
+label{
+    font-size: 24px;
+}
+.input-item{
+    margin: 30px 0;
+    height: 60px;
+    line-height: 60px;
+}
+.input-span{
+    font-size: 24px;
+    width: 140px;
+    text-align: right;
+    float: left;
+}
+.company-input{
+    width: 600px;
+    height: 50px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 24px;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 30px;
+    padding: 5px;
+}
+.city-select{
+    width: 250px;
+    height: 50px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 24px;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-left: 30px;
+    float: left;
+}
+.univercity-select{
+    width: 320px;
+    height: 50px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 24px;
+    box-sizing: border-box;
+    margin-left: 30px;
+    padding: 5px;
+    float: left;
+}
