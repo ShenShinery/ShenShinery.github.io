@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="#">
+        <input type="radio" id="in-school" name="job" class="radio-input" checked = "checked" value="in" onchange="checkSchool(this);"/>
+        <label for="in-school">在校生</label>
+        <input type="radio" id="out-school" name="job" class="radio-input" value="out" onchange="checkSchool(this);"/>
+        <label for="out-school">非在校生</label>
+        <div class="input-item" id="in-school-item">
+            <div class="input-span">学校：</div>
+            <select name="city" id="city" class="city-select" onchange="chooseUnivercity(this);">
+                <option value="beijing">北京</option>
+                <option value="shanghai">上海</option>
+                <option value="wuxi">无锡</option>
+                <option value="chongqing">重庆</option>
+                <option value="henan">河南</option>
+            </select>
+            <select name="univercity" id="univercity" class="univercity-select"></select>
+        </div>
+        <div class="input-item" id="out-school-item" hidden="hidden">
+            <div class="input-span">单位：</div>
+            <input class="company-input" type="text" id="company"/>
+        </div>
+    </form>
+    <script>
+    function showInSchoolItem(){
+        document.getElementById("in-school-item").hidden = false;
+        document.getElementById("out-school-item").hidden = "hidden";
+    }
+    function showOutSchoolItem(){
+        document.getElementById("in-school-item").hidden = "hidden";
+        document.getElementById("out-school-item").hidden = false;
+    }
+    function checkSchool(obj){
+        if(obj.value == "in"){
+            showInSchoolItem();
+        }else{
+            showOutSchoolItem();
+        }
+    }
+    function appendBeijingUni(obj){
+        var array = ["清华大学","北京大学","北京外国语大学","北京邮电大学","中国戏剧学院"];
+        for(let arr of array){
+            var option = document.createElement("option");
+            obj.appendChild(option).append(arr);
+        }
+    }
+    function appendShanghaiUni(obj){
+        var array = ["复旦大学","上海交通大学","华东理工大学","上海外国语大学","同济大学"];
+        for(let arr of array){
+            var option = document.createElement("option");
+            obj.appendChild(option).append(arr);
+        }
+    }
+    function appendWuxiUni(obj){
+        var array = ["江南大学","江南大学太湖学院","无锡信息技术大学"];
+        for(let arr of array){
+            var option = document.createElement("option");
+            obj.appendChild(option).append(arr);
+        }
+    }
+    function appendChongqingUni(obj){
+        var array = ["重庆大学","西南大学","第三军医大学 ","西南政法大学","重庆交通大学","重庆邮电大学"];
+        for(let arr of array){
+            var option = document.createElement("option");
+            obj.appendChild(option).append(arr);
+        }
+    }
+    function appendHenanUni(obj){
+        var array = ["郑州大学","河南理工大学","河南师范大学 ","河南农业大学","河南科技大学"];
+        for(let arr of array){
+            var option = document.createElement("option");
+            obj.appendChild(option).append(arr);
+        }
+    }
+    function chooseUnivercity(obj){
+        var uni = document.getElementById("univercity");
+        uni.innerHTML = "";
+        if(obj.value == "beijing"){
+            appendBeijingUni(uni);
+        }else if(obj.value == "shanghai"){
+            appendShanghaiUni(uni);
+        }else if(obj.value == "wuxi"){
+            appendWuxiUni(uni);
+        }else if(obj.value == "chongqing"){
+            appendChongqingUni(uni);
+        }else if(obj.value == "henan"){
+            appendHenanUni(uni);
+        }else{
+            alert("error");
+        }
+    }
+    function initStyle(){
+        document.getElementById("in-school").checked = "checked";
+        showInSchoolItem();
+        document.getElementById("city").getElementsByTagName("option")[0].selected = "selected";
+        appendBeijingUni(document.getElementById("univercity"));
+    }
+    initStyle();
+    </script>
+</body>
+</html>
