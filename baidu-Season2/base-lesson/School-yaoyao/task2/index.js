@@ -267,9 +267,10 @@ function validateAll(){
     var emailValidate = validateEmail(document.getElementById("email"));
     var mobileValidate = validateMobile(document.getElementById("mobile"));
     if(nameValidate && passwordValidate && rePwdValidate && emailValidate && mobileValidate){
-        alert("提交成功");
+        alert("提交成功!");
         return true;
     }else{
+        alert("输入有误！");
         return false;
     }   
 }
