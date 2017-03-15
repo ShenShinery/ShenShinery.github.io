@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.grid {
+    background: -webkit-linear-gradient(top, transparent 39px, #CCCCCC 40px), -webkit-linear-gradient(left, transparent 39px, #CCCCCC 40px);
+    background: -moz-linear-gradient(top, transparent 39px, #CCCCCC 40px), -moz-linear-gradient(left, transparent 39px, #CCCCCC 40px);
+    background: -o-linear-gradient(top, transparent 39px, #CCCCCC 40px), -o-linear-gradient(left, transparent 39px, #CCCCCC 40px);
+    background: -ms-linear-gradient(top, transparent 39px, #CCCCCC 40px), -ms-linear-gradient(left, transparent 39px, #CCCCCC 40px);
+    background: linear-gradient(top, transparent 39px, #CCCCCC 40px), linear-gradient(left, transparent 39px, #CCCCCC 40px);
+    -webkit-background-size: 40px 40px;
+    -moz-background-size: 40px 40px;
+    background-size: 40px 40px;
+}
+div.grid{
+    width: 400px;
+    height: 400px;
+    margin: 40px;
+    border: 1px solid;
+}
+.objector-red{
+    width: 40px;
+    height: 25px;
+    background-color: red;
+    position: absolute;
+    left: 80px;
+    top: 95px;
+}
+.objector-blue{
+    width: 40px;
+    height: 15px;
+    background-color: blue;
+    position: absolute;
+    left: 80px;
+    top: 80px;
+}
+.action{
+    margin: 40px;
+}
+.action input{
+    padding-left: 5px;
+    width: 280px;
+    height: 40px;
+    font-size: 24px;
+    border: 1px #CCCCCC solid;
+    border-radius: 5px;
+}
+.action button{
+    font-size: 18px;
+    height: 36px;
+    width: 80px;
+    border: 1px #CCCCCC solid;
+    background-color: CCCCCC;
+    border-radius: 5px;
+    cursor: pointer;
+}
