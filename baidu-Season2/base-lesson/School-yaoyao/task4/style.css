@@ -50,7 +50,11 @@ div.grid{
     height: 36px;
     width: 80px;
     border: 1px #CCCCCC solid;
-    background-color: CCCCCC;
+    background-color: #CCCCCC;
     border-radius: 5px;
     cursor: pointer;
+}
+.action ul,.action p{
+    margin: 10px;
+    color: gray;
 }
