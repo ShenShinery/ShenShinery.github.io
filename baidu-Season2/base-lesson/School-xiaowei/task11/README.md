@@ -10,7 +10,9 @@
 <ul>
     <li>实现与设计图一致的移动端Web页面</li>
 </ul>
+
 ## 任务注意事项 ##
+
 <ul>   
     <li>本任务只涉及 HTML 及 CSS</li>
     <li>实现的页面和设计图在iOS Safari，微信，Android浏览器中均基本一致</li>
@@ -18,7 +20,9 @@
     <li>尝试在适合的地方使用CSS 3中的flex布局</li>
     <li>有能力的同学可以在实现一遍后尝试用less, sass或者stylus等再实现一次</li>
 </ul>
+
 ## 在线学习参考资料 ##
+
 <ul>
     <li>
         <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Mobile" target="view_window" >
