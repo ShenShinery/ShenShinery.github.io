@@ -1,5 +1,5 @@
-#任务二：零基础HTML及CSS编码（一）#
-##任务目的##
+# 任务二：零基础HTML及CSS编码（一） #
+## 任务目的 ##
 <ul>
     <li>
         针对设计稿样式进行合理的HTML架构，包括以下但不限于：
@@ -19,14 +19,14 @@
     </li>
 </ul>
 
-##任务描述##
+## 任务描述 ##
 <ul>
     <li>
         基于第一个任务“零基础HTML编码”的代码，参考示例图，在步骤一的代码基础上增加CSS样式代码的编写
     </li>
 </ul>
 
-##任务注意事项##
+## 任务注意事项 ##
 <ul>
     <li>只需要完成HTML，CSS代码编写，不需要写JavaScript</li>
     <li>示例图仅为参考，不需要完全实现一致，其中的图片、文案均可自行设定</li>
@@ -34,7 +34,7 @@
     <li>HTML 及 CSS 代码结构清晰、规范</li>
 </ul>
 
-##在线学习参考资料##
+## 在线学习参考资料 ##
 <ul>
     <li>
         <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Introduction" target="view_window">
