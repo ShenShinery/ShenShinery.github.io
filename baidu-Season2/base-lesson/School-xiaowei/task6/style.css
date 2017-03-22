@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #5D5D5D;
+}
+.clr{
+    clear: both;
+}
+.container{
+    width: 980px;
+    height: 1386px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    border: 1px solid #918E8C;
+}
+.content{
+    width: 892px;
+    margin: 0 auto;
+}
+header{
+    margin: 0 auto;
+    width: 892px;
+}
+.logo-link{
+    height: 61px;
+    width: 110px;
+    background-color: #D45D5C;
+}
+.logo-link a{
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 100px;
+    margin-left: 5px;
+    font-size: 12px;
+    font-family: 黑体;
+}
+header time{
+    float:right;
+    line-height: 100px;
+    margin-left: 5px;
+    font-size: 12px;
+    color: #D45D5C;
+    font-family: 黑体;
+}
+.head-line{
+    height: 2px;
+    width: 892px;
+    /*margin: 0 auto;*/
+    background-color: #918E8C;
+}
+section{
+    margin: 30px 0;
+    /*float: left;*/
+}
+.article-headlines{
+    width: 641px;
+    float: left;
+}
+.img-div{
+    width: 641px;
+    height: 301px;
+    background-size: 641px 301px;
+    background-image: url(img/bridge.png);
+}
+.img-shadow-left{
+    width: 191px;
+    height: 301px;
+    background-color: #2C513F;
+    opacity: 0.6;
+    float: left;
+}
+.img-shadow-right{
+    width: 191px;
+    height: 301px;
+    background-color: #894F5B;
+    opacity: 0.6;
+    float: right;
+}
+.article-content{
+    margin-top: 10px;
+    width: 100%;
+}
+.article-content header{
+    font-size: 16px;
+    font-family: 微软雅黑;
+    text-decoration: underline; 
+}
+.article-content p{
+    font-size: 12px;
+    color: #767777;
+    font-family: 宋体;
+    margin-top: 16px;   
+}
+.content1{
+    float: left;
+    width: 40%;
+    padding: 16px 16px 16px 0;
+    box-sizing: border-box;
+}
+.content2{
+    float: left;
+    width: 30%;
+    padding: 16px 0;
+    box-sizing: border-box;
+}
+.content3{
+    float: right;
+    width: 30%; 
+    padding: 16px 16px 16px 16px;
+    box-sizing: border-box;
+}
+.content1 header{
+    color: #418c59;
+}
+.content2 header{
+    color: #d2994f;
+}
+.content3 header{
+    color: #cc7680;
+}
+.article-about-technologe{
+    width: 203px;
+    float: left;
+}
+.article2-head-line{
+    width: 203px;
+    height: 2px;
+    background-color: #cc8091;   
+}
