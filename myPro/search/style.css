@@ -57,12 +57,11 @@
 }
 .hot-search-list{
     z-index:99;
-    padding-left:  5%;
     white-space: nowrap;
     height: 102%;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 10px;
+    padding: 1% 5%;
 }
 .hot-search-list li{
     font-size: 14px;
