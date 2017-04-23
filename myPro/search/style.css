@@ -27,6 +27,8 @@
 }
 .cancel-btn{
     width: 8%;
+    height: 30px;
+    line-height: 30px;
     margin-left: 2%;
     display: inline-block;
     color: #9E9FA1;
