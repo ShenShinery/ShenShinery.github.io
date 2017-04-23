@@ -4,8 +4,11 @@ function RequestAjax(text){
     console.log("测试：" + text);
 }
 
-input.on("keyup", function(event){
-    if(this.value!=""){
+//input.on("keyup", function(event){
+
+//});
+input.on("input",function(){
+        if(this.value!=""){
         throttle(RequestAjax, null, 200, this.value.trim(),1000);
         $("#hot-search").hide();
         $("#history-search").hide();
@@ -19,8 +22,8 @@ input.on("keyup", function(event){
         $("#search-result").hide();
         $("body").css("background-color","#FFFFFF");
     }
-});
-
+//    throttle(RequestAjax, null, 400, this.value.trim(),1000);
+})
 function throttle(fn,context,delay,text,mustApplyTime){
     clearTimeout(fn.timer);//清楚当前定时器
 
@@ -44,4 +47,16 @@ function throttle(fn,context,delay,text,mustApplyTime){
 $("#search-form").on("submit",showResult);
 function showResult(){
     alert(1);
+}
+
+$("#clear-history-btn").on("click",deleteHistory);
+function deleteHistory(){
+    $("#cover").show();
+    $("#pop-outside").show();
+}
+$("#cancel").on("click",cancelDeleteHistory);
+function  cancelDeleteHistory(){
+    $("#pop-outside").hide();
+    $("#cover").hide();
+
 }
