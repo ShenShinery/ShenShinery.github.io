@@ -46,14 +46,14 @@
 .hot-search-list{
     padding-left:  5%;
     white-space: nowrap;
-    height: 22px;
-    line-height: 22px;
+    height: 26px;
+    line-height: 26px;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 }
 .hot-search-list li{
     font-size: 14px;
-    background-color: #F1F2F5;
+    background-color: #F0F2F5;
     padding: 3px 8px;
     border-radius: 4px;
     display: inline;
