@@ -36,18 +36,18 @@
 .hot-search-keys{
     background-color: #FFFFFF;
     width: 100%;
-    height: 90px;
-    border-top: solid 2px #DCDCDC;
+    height: 80px;
+    border-top: solid 1px #DCDCDC;
     border-bottom: solid 1px #DFDFE1;
 }
 .hot-search-header{
-    padding:10px 5%;
+    padding:8px 5%;
 }
 .hot-search-list{
     padding-left:  5%;
     white-space: nowrap;
-    height: 30px;
-    line-height: 30px;
+    height: 22px;
+    line-height: 22px;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 }
@@ -65,7 +65,7 @@
     background-color: #F1F2F6;
 }
 .history-search-header{
-    padding:10px 5%;
+    padding:8px 5%;
 }
 .history-search-list,.search-list{
     list-style: none;
