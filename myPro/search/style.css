@@ -50,13 +50,19 @@
 .hot-search-header{
     padding:8px 5%;
 }
+.hot-list{
+    height: 100%;
+    overflow: hidden;
+    z-index: 99;
+}
 .hot-search-list{
+    z-index:99;
     padding-left:  5%;
     white-space: nowrap;
-    height: 26px;
-    line-height: 26px;
+    height: 102%;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
 }
 .hot-search-list li{
     font-size: 14px;
