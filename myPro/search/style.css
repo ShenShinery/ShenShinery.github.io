@@ -49,6 +49,7 @@
     height: 40px;
     line-height: 40px;
     overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 .hot-search-list li{
     background-color: #F1F2F5;
