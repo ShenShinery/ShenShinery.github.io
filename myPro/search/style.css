@@ -3,7 +3,9 @@
     margin: 0;
     font-family: "Microsoft YaHei";
 }
-
+ body{
+     overflow-x: hidden;
+ }
 .header-search{
     width: 100%;
     text-align: center;
