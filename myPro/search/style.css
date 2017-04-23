@@ -124,7 +124,6 @@
     top: 38%;
     z-index: 99;
     display: none;
-
 }
 .pop{
     background-color: white;
@@ -150,13 +149,13 @@
     border-bottom-left-radius: 4px;
     border: 1px #e7e7e7;
     border-top-style:solid;
-
 }
 .choose-apply{
     float: left;
     font-size: 16px;
     border: 1px #F23030;
     border-right-style:solid;
+    border-top-style:solid;
     color: #FFFFFF;
     padding: 13px 57.5px;
     background-color: #F23030;
