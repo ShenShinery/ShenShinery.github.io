@@ -23,12 +23,14 @@
     outline: none;
     background: url("images/pic_sousuo_03.png") no-repeat 8px 7px #EFEFF4;
     background-size: 16px 16px;
+    box-sizing: border-box;
 }
 .cancel-btn{
     width: 8%;
     display: inline-block;
     color: #9E9FA1;
     min-width: 32px;
+    box-sizing: border-box;
 }
 .search-list{
     display: none;
