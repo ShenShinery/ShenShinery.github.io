@@ -36,7 +36,7 @@
 .hot-search-keys{
     background-color: #FFFFFF;
     width: 100%;
-    height: 100px;
+    height: 90px;
     border-top: solid 2px #DCDCDC;
     border-bottom: solid 1px #DFDFE1;
 }
@@ -46,8 +46,8 @@
 .hot-search-list{
     padding-left:  5%;
     white-space: nowrap;
-    height: 40px;
-    line-height: 40px;
+    height: 30px;
+    line-height: 30px;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 }
