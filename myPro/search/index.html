@@ -10,8 +10,8 @@
     <!--<div class="search"></div>-->
     <header class="header-search">
         <form action="" id="search-form">
-            <input type="text" class="search" id="search-key"/>
-            <div class="cancel-btn">取消</div>
+            <input type="text" class="search" id="search-key" autocomplete="off"/>
+            <span class="cancel-btn">取消</span>
         </form>
     </header>
     <ul class="search-list" id="search-result">
@@ -54,6 +54,16 @@
     </div>
     <div class="clear-history-btn" id="clear-history-btn">
        <span>清除历史记录</span>
+    </div>
+    <div class="covering" id="cover"></div>
+    <div class="pop-outside" id="pop-outside">
+        <div class="pop">
+            <div class="tips">
+                <p>确定清空历史搜索吗？</p>
+            </div>
+            <div class="choose-cancel" id="cancel">取消</div>
+            <div class="choose-apply" id="confirm">确定</div>
+        </div>
     </div>
 </body>
 <script src="jquery-2.1.1.min.js"></script>
