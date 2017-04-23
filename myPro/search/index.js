@@ -12,6 +12,12 @@ input.on("keyup", function(event){
         $("#clear-history-btn").hide();
         $("#search-result").show();
         $("body").css("background-color","#F1F2F6");
+    }else{
+        $("#hot-search").show();
+        $("#history-search").show();
+        $("#clear-history-btn").show();
+        $("#search-result").hide();
+        $("body").css("background-color","#FFFFFF");
     }
 });
 
