@@ -127,12 +127,10 @@
 
 }
 .pop{
-    /*border-radius: 4px;*/
     background-color: white;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    width: 295px;
-    /*height: 123px;*/
+    width: 294px;
     margin: 0 auto;
 }
 .tips{
@@ -140,8 +138,6 @@
     color: #6c7684;
     font-size: 14px;
     padding: 28px 41px;
-    border: 1px #e7e7e7;
-    border-bottom-style:solid;
 }
 .choose-cancel{
     float: left;
@@ -151,8 +147,9 @@
     color: #6c7684;
     background-color: #FFFFFF;
     padding: 13px 57px;
-    /*-moz-border-radius-bottomleft:4px;*/
     border-bottom-left-radius: 4px;
+    border: 1px #e7e7e7;
+    border-top-style:solid;
 
 }
 .choose-apply{
