@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
     <title></title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-    <!--<div class="search"></div>-->
     <header class="header-search">
-        <form action="" id="search-form">
+        <form action="D:\myDoc\winnie-project\emall-app\code\search\search-result.html" id="search-form">
             <input type="text" class="search" id="search-key" autocomplete="off"/>
             <span class="cancel-btn">取消</span>
         </form>
     </header>
     <ul class="search-list" id="search-result">
-        <li>lishi1</li>
-        <li>lishi2</li>
-        <li>lishi3</li>
-        <li>lishi565</li>
-        <li>lishi777</li>
-        <li>lishi890</li>
+        <li onclick="searchThisKey(this);" value="123">123</li>
+        <li>手提包</li>
+        <li>电脑</li>
+        <li>苹果手机</li>
+        <li>快速</li>
+        <li>手机充电器</li>
     </ul>
     <div class="hot-search-keys" id="hot-search">
         <header class="hot-search-header"><b>热搜</b></header>
         <div class="hot-list">
             <ul class="hot-search-list">
-                <li>123</li>
+                <li onclick="searchThisKey(this);" value="123">123</li>
                 <li>手机</li>
                 <li>苹果</li>
                 <li>手机壳</li>
@@ -38,13 +38,17 @@
                 <li>你好</li>
             </ul>
         </div>
-
     </div>
     <div class="history-search" id="history-search">
         <div class="space"></div>
         <header class="history-search-header"><b>历史搜索</b></header>
         <ul class="history-search-list">
-            <li>lishi1</li>
+            <li onclick="searchThisKey(this);" value="123">123</li>
+            <li>lishi2</li>
+            <li>lishi3</li>
+            <li>lishi565</li>
+            <li>lishi777</li>
+            <li>lishi890</li>
             <li>lishi2</li>
             <li>lishi3</li>
             <li>lishi565</li>
@@ -55,17 +59,8 @@
     <div class="clear-history-btn" id="clear-history-btn">
        <span>清除历史记录</span>
     </div>
-    <div class="covering" id="cover"></div>
-    <div class="pop-outside" id="pop-outside">
-        <div class="pop">
-            <div class="tips">
-                <p>确定清空历史搜索吗？</p>
-            </div>
-            <div class="choose-cancel" id="cancel">取消</div>
-            <div class="choose-apply" id="confirm">确定</div>
-        </div>
-    </div>
 </body>
-<script src="jquery-2.1.1.min.js"></script>
-<script src="index.js"></script>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/selfDefineUtils.js"></script>
+<script src="js/index.js"></script>
 </html>
