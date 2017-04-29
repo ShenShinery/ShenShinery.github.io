@@ -8,7 +8,7 @@
 	$("<link>").attr({
 		rel : "stylesheet",
 		type : "text/css",
-		href : "selfDefineUtils.css"
+		href : "css/selfDefineUtils.css"
 	}).appendTo("head");
 	var self_define = {};
 	
