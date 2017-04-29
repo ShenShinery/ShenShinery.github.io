@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/search-result.css"/>
+</head>
+<body>
+    <div class="covering" id="covering"></div>
+    <header class="header-search">
+        <img class="go-back" id="back" src="images/icon_logLeft.png" alt="返回" onclick="history.go(-1);" />
+        <input type="text" class="search" id="search-key" autocomplete="off"/>
+    </header>
+    <ul class="filter-list" id="filter-list">
+    </ul>
+    <ul class="label-list" id="label-list">
+    </ul>
+    <ul id="sum-list" class="sum-list">
+        <li>综合排序</li>
+        <li>新品优先</li>
+        <li>评论数从高到低</li>
+    </ul>
+</body>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/search-result.js"></script>
+</html>
