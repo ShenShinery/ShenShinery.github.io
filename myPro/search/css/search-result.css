@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 0.124rem;
+}
+body{
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+}
+.header-search{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    font-size: 0.142rem;
+    background-color: #F8F8F8;
+    height: 0.408rem;
+    line-height: 0.408rem;
+    z-index:199;
+}
+.header-search form{
+    width: 100%;
+    height: 100%;
+}
+.search{
+    width: 86%;
+    height: 0.267rem;
+    border-radius: 0.142rem;
+    border:0.01rem #e7e7e7 solid;
+    padding-left: 0.311rem;
+    outline: none;
+    background: url("../images/pic_sousuo_03.png") no-repeat 0.071rem 0.062rem #FFFFFF;
+    background-size: 0.142rem 0.142rem;
+    box-sizing: border-box;
+}
+.go-back{
+    height: 0.231rem;
+    float: left;
+    margin:0.089rem 2%;
+}
+.filter-list{
+    background-color: #fff;
+    position: relative;
+    top:0.408rem;
+    width: 100%;
+    height: 0.356rem;
+    border-top: solid 0.01rem #DCDCDC;
+    border-bottom: solid 0.01rem #DFDFE1;
+    z-index:199;
+}
+.filter-list li{
+    display: inline-block;
+    text-align: left;
+    padding: 0 8%;
+    height: 0.356rem;
+    line-height: 0.356rem;
+}
+.sum-list{
+    width: 100%;
+    background-color: #FFFFFF;
+    position: relative;
+    top:0.408rem;
+    list-style: none;
+    z-index:199;
+    display: none;
+}
+.sum-list li{
+    padding: 0 8%;
+    text-align: left;
+    height: 0.267rem;
+    line-height: 0.267rem;
+}
+.covering{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    opacity:0.3;
+    z-index:10;
+    position: fixed;
+    display: none;
+}

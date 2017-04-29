@@ -1,0 +1,119 @@
+ body{
+     font-size: 0.11rem;
+     overflow-x: hidden;
+     height: 100%;
+ }
+.header-search{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.142rem;
+    background-color: #FFFFFF;
+    height: 0.408rem;
+    line-height:  0.408rem;
+    z-index: 200;
+    border-bottom: solid 0.01rem #DFDFE1;
+}
+.header-search form{
+    width: 100%;
+    height: 100%;
+}
+.search{
+    margin:0 auto;
+    width: 78%;
+    height: 0.267rem;
+    border-radius:0.142rem;
+    border: 0.01rem #e7e7e7 solid;
+    padding-left: 0.311rem;
+    outline: none;
+    background: url("../images/pic_sousuo_03.png") no-repeat 0.071rem 0.062rem #EFEFF4;
+    background-size: 0.142rem 0.142rem;
+    box-sizing: border-box;
+}
+.cancel-btn{
+    width: 8%;
+    margin-left:2%;
+    display: inline-block;
+    color: #9E9FA1;
+    min-width: 0.302rem;
+    box-sizing: border-box;
+}
+.search-list{
+    display: none;
+}
+.hot-search-keys{
+    position: relative;
+    top:0.408rem;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 0.71rem;
+
+    border-bottom: solid 0.01rem #DFDFE1;
+}
+.hot-search-header{
+    padding:0.071rem 5%;
+}
+.hot-list{
+    height: 100%;
+    overflow: hidden;
+}
+.hot-search-list{
+    white-space: nowrap;
+    height: 102%;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 1% 5%;
+}
+.hot-search-list li{
+    font-size: 0.124rem;
+    background-color: #F0F2F5;
+    padding: 0.027rem 0.071rem;
+    border-radius: 0.036rem;
+    display: inline;
+    margin-right: 0.044rem;
+}
+.space{
+    width: 100%;
+    height: 0.089rem;
+    background-color: #F1F2F6;
+}
+.history-search{
+    position: relative;
+    top:0.408rem;
+}
+.history-search-header{
+    padding:0.044rem 5%;
+}
+.history-search-list,.search-list{
+    list-style: none;
+    background-color: #FFFFFF;
+}
+.history-search-list li,.search-list li{
+    padding-left:  5%;
+    width: 100%;
+    height: 0.356rem;
+    line-height: 0.356rem;
+    color: #797979;
+    border: 0.01rem #F4F4F6;
+    border-top-style: solid;
+}
+.history-search-list li:last-child{
+    border: 0.01rem #F4F4F6;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+.clear-history-btn{
+    width: 60%;
+    height: 0.32rem;
+    line-height: 0.32rem;
+    text-align: center;
+    color: #767676;
+    border: 0.01rem solid #A8A8A8;
+    margin: 0.178rem auto 0 auto;
+    border-radius:  0.01rem;
+    position: relative;
+    top: 0.408rem;
+    margin-bottom: 0.178rem;
+}
