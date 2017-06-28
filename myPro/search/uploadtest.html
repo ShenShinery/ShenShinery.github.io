@@ -14,7 +14,7 @@
         console.log(1);
         var fs=document.getElementById('file').files[0];
         if(fs){
-            var reader=new new FileReader();
+            var reader=new FileReader();
             reader.readAsDataURL(fs);
 
             reader.onloadstart=function(){
