@@ -15,11 +15,9 @@
     if(fs){
         var reader=new new FileReader();
         reader.readAsDataURL(fs);
-        function li(str){
             var obj=document.createElement('li');
             obj.innerHTML=str;
             document.body.appendChild(obj);
-        }
         reader.onloadstart=function(){
             li('开始读取')
         }
