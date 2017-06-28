@@ -9,36 +9,39 @@
 <input type="file" id="file" name="pic" id="pic" accept="image/*" multiple />
 </body>
     <script>
-         document.getElementById('file').onchange=read;
+    document.getElementById('file').onchange=read;
     function read(){
-    var fs=document.getElementById('file').files[0];
-    if(fs){
-        var reader=new new FileReader();
-        reader.readAsDataURL(fs);
+        var fs=document.getElementById('file').files[0];
+        if(fs){
+            var reader=new new FileReader();
+            reader.readAsDataURL(fs);
+
+            reader.onloadstart=function(){
+                li('开始读取')
+            }
+            reader.onprogress=function(){
+                li('正在读取.....')
+            }
+            reader.onload=function(e){
+                var img=document.createElement('img');
+                img.src=this.result;
+                document.body.appendChild(img);
+            }
+            reader.onabort=function(){
+                li('读取中断！！')     
+            }
+            reader.onerror=function(){
+                li('读取出现错误！！')
+            }
+            reader.onloadend=function(){
+                li('FileReader读取步骤执行完毕')
+            }
+        }
+    }
+        function li(str){
             var obj=document.createElement('li');
             obj.innerHTML=str;
             document.body.appendChild(obj);
-        reader.onloadstart=function(){
-            li('开始读取')
         }
-        reader.onprogress=function(){
-            li('正在读取.....')
-        }
-        reader.onload=function(e){
-            var img=document.createElement('img');
-            img.src=this.result;
-            document.body.appendChild(img);
-        }
-        reader.onabort=function(){
-            li('读取中断！！')     
-        }
-        reader.onerror=function(){
-            li('读取出现错误！！')
-        }
-        reader.onloadend=function(){
-            li('FileReader读取步骤执行完毕')
-        }
-    }
-}
     </script>
 </html>
