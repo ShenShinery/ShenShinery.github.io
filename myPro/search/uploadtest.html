@@ -11,6 +11,7 @@
     <script>
     document.getElementById('file').onchange=read;
     function read(){
+        console.log(1);
         var fs=document.getElementById('file').files[0];
         if(fs){
             var reader=new new FileReader();
