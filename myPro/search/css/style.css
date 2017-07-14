@@ -165,3 +165,16 @@
   height: 30px;
   width: 30px;
 }
+.input_ware{
+  font-family: Arial, 微软雅黑;
+  height: 30px;
+  border: none;
+  border-radius:5px;
+  width: 100%;
+  outline: none;
+  color: #444;
+  background:#f0f2f5;
+  padding:2px 23px 2px 30px;
+  font-size: 14px;
+  -webkit-appearance: none;  
+}
