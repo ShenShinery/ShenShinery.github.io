@@ -156,6 +156,7 @@
     float: left;
     background: url(../images/pic_sousuo_03.png) no-repeat 15px 7px;
     background-size: 15px;
+	z-index:200;
 }
 .search_find_icon_search{
   position: absolute;
@@ -177,4 +178,5 @@
   padding:2px 23px 2px 30px;
   font-size: 14px;
   -webkit-appearance: none;  
+	z-index:10;
 }
