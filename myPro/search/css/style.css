@@ -244,4 +244,25 @@
 
 /* 重写搜索  */
 .search-outside{position:absolute;top:48px;left:0px;bottom:60px;width: 100%;overflow-x: hidden;overflow-y: scroll;-webkit-overflow-scrolling:touch;}
-
+.input_ware{
+  font-family: Arial, 微软雅黑;
+  height: 30px;
+  border: none;
+  border-radius:5px;
+  width: 86%;
+  outline: none;
+  color: #444;
+  background: #f0f2f5;
+  padding: 2px 0;
+  font-size: 14px;
+  padding-left:6px;
+  margin-left: 6%;  
+}
+.input_ware::-webkit-search-cancel-button { display: none; }
+.input_sou{
+  background: url(../images/pic_sousuo_03.png) no-repeat;
+  width: 16px;
+  height: 16px;
+  margin: 10.5px 5px 5px 5px;
+  background-size: 15px;
+}
